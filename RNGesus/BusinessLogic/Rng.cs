@@ -33,7 +33,7 @@ namespace BusinessLogic
 
         private int GenerateResult()
         {
-            return rng.Next(1, numberOfOutcomes);
+            return rng.Next(1, numberOfOutcomes + 1);
         }
     }
 }
