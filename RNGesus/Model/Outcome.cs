@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class Outcome
+    public class WeightedNamedOutcome
     {
-        public static int AmountOfOutcomesCreated = 0;
-        private int number;
-        private int name;
+        private String name;
+        private int weight;
 
-        public int Number { get => number; set => number = value; }
-        public int Name { get => name; set => name = value; }
+        public String Name { get; set; }
+        public int Weight { get => weight; set => weight = value; }
 
-        public Outcome()
+        public WeightedNamedOutcome(String name, int weight = 1)
         {
-            number = ++AmountOfOutcomesCreated;
+            this.name = name;
+            this.Weight = weight;
         }
     }
 }

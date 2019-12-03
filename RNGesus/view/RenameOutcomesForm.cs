@@ -12,9 +12,13 @@ namespace view
 {
     public partial class RenameOutcomesForm : Form
     {
-        public RenameOutcomesForm(List<Outcome> outcomes)
+        public RenameOutcomesForm(List<WeightedNamedOutcome> outcomes)
         {
             InitializeComponent();
+            listBoxOutcomes.DataSource = outcomes;
         }
+
+        
+
     }
 }
