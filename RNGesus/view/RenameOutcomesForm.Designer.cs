@@ -37,8 +37,8 @@
             this.buttonRemoveSelected = new System.Windows.Forms.Button();
             this.textBoxCurrentUsedWeight = new System.Windows.Forms.TextBox();
             this.textBoxTotalWeight = new System.Windows.Forms.TextBox();
-            this.buttonExit = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.buttonSaveAndExit = new System.Windows.Forms.Button();
+            this.textBoxWeightExplaination = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // listViewOutcomes
@@ -73,6 +73,7 @@
             this.buttonRemoveAll.TabIndex = 2;
             this.buttonRemoveAll.Text = "Remove all";
             this.buttonRemoveAll.UseVisualStyleBackColor = true;
+            this.buttonRemoveAll.Click += new System.EventHandler(this.buttonRemoveAll_Click);
             // 
             // buttonAddOutcome
             // 
@@ -92,6 +93,7 @@
             this.buttonRemoveSelected.TabIndex = 4;
             this.buttonRemoveSelected.Text = "Remove selected";
             this.buttonRemoveSelected.UseVisualStyleBackColor = true;
+            this.buttonRemoveSelected.Click += new System.EventHandler(this.buttonRemoveSelected_Click);
             // 
             // textBoxCurrentUsedWeight
             // 
@@ -109,32 +111,32 @@
             this.textBoxTotalWeight.TabIndex = 6;
             this.textBoxTotalWeight.Text = "Total weight: 0";
             // 
-            // buttonExit
+            // buttonSaveAndExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(656, 395);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(102, 23);
-            this.buttonExit.TabIndex = 7;
-            this.buttonExit.Text = "Exit";
-            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonSaveAndExit.Location = new System.Drawing.Point(656, 395);
+            this.buttonSaveAndExit.Name = "buttonSaveAndExit";
+            this.buttonSaveAndExit.Size = new System.Drawing.Size(102, 23);
+            this.buttonSaveAndExit.TabIndex = 7;
+            this.buttonSaveAndExit.Text = "Save and Exit";
+            this.buttonSaveAndExit.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // textBoxWeightExplaination
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(450, 283);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(199, 135);
-            this.textBox2.TabIndex = 9;
-            this.textBox2.Text = resources.GetString("textBox2.Text");
+            this.textBoxWeightExplaination.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxWeightExplaination.Location = new System.Drawing.Point(450, 210);
+            this.textBoxWeightExplaination.Multiline = true;
+            this.textBoxWeightExplaination.Name = "textBoxWeightExplaination";
+            this.textBoxWeightExplaination.Size = new System.Drawing.Size(199, 208);
+            this.textBoxWeightExplaination.TabIndex = 9;
+            this.textBoxWeightExplaination.Text = resources.GetString("textBoxWeightExplaination.Text");
             // 
             // RenameOutcomesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.buttonExit);
+            this.Controls.Add(this.textBoxWeightExplaination);
+            this.Controls.Add(this.buttonSaveAndExit);
             this.Controls.Add(this.textBoxTotalWeight);
             this.Controls.Add(this.textBoxCurrentUsedWeight);
             this.Controls.Add(this.buttonRemoveSelected);
@@ -159,7 +161,7 @@
         private System.Windows.Forms.Button buttonRemoveSelected;
         private System.Windows.Forms.TextBox textBoxCurrentUsedWeight;
         private System.Windows.Forms.TextBox textBoxTotalWeight;
-        private System.Windows.Forms.Button buttonExit;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button buttonSaveAndExit;
+        private System.Windows.Forms.TextBox textBoxWeightExplaination;
     }
 }

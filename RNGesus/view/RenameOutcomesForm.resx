@@ -120,7 +120,7 @@
   <metadata name="directorySearcher1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="textBox2.Text" xml:space="preserve">
-    <value>If the current used weight is lower than the total weight, the remaining weight will be "nothing" as in, none of the outcomes happened. Can be used to simulate a loot table from games for example, where loot doesn't always drop.</value>
+  <data name="textBoxWeightExplaination.Text" xml:space="preserve">
+    <value>If the current used weight is lower than the total weight, the remaining weight will be "nothing" as in, none of the outcomes happened. Can be used to simulate a loot table from games for example, where loot doesn't always drop.     NOTE: The current used weight can NOT be higher than the total weight.</value>
   </data>
 </root>

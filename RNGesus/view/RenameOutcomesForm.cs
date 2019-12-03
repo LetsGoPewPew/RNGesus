@@ -28,5 +28,20 @@ namespace view
         {
             new AddOutcomeForm().ShowDialog();
         }
+
+        private void buttonRemoveSelected_Click(object sender, EventArgs e)
+        {
+            if(listBoxOutcomes.SelectedItem == null)
+            {
+                return;
+            }
+
+            WeightedNamedOutcome.Outcomes.Remove(listBoxOutcomes.SelectedItem as WeightedNamedOutcome);
+        }
+
+        private void buttonRemoveAll_Click(object sender, EventArgs e)
+        {
+            WeightedNamedOutcome.Outcomes.Clear();
+        }
     }
 }
