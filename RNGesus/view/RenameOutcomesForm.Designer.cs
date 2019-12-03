@@ -28,15 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RenameOutcomesForm));
             this.listViewOutcomes = new System.Windows.Forms.ListView();
             this.listBoxOutcomes = new System.Windows.Forms.ListBox();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.buttonRemoveAll = new System.Windows.Forms.Button();
             this.buttonAddOutcome = new System.Windows.Forms.Button();
             this.buttonRemoveSelected = new System.Windows.Forms.Button();
-            this.textBoxCurrentWeight = new System.Windows.Forms.TextBox();
-            this.textBoxTargetWeight = new System.Windows.Forms.TextBox();
+            this.textBoxCurrentUsedWeight = new System.Windows.Forms.TextBox();
+            this.textBoxTotalWeight = new System.Windows.Forms.TextBox();
             this.buttonExit = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // listViewOutcomes
@@ -90,21 +92,21 @@
             this.buttonRemoveSelected.Text = "Remove selected";
             this.buttonRemoveSelected.UseVisualStyleBackColor = true;
             // 
-            // textBoxCurrentWeight
+            // textBoxCurrentUsedWeight
             // 
-            this.textBoxCurrentWeight.Location = new System.Drawing.Point(12, 400);
-            this.textBoxCurrentWeight.Name = "textBoxCurrentWeight";
-            this.textBoxCurrentWeight.Size = new System.Drawing.Size(128, 20);
-            this.textBoxCurrentWeight.TabIndex = 5;
-            this.textBoxCurrentWeight.Text = "Current Weight: 0";
+            this.textBoxCurrentUsedWeight.Location = new System.Drawing.Point(12, 400);
+            this.textBoxCurrentUsedWeight.Name = "textBoxCurrentUsedWeight";
+            this.textBoxCurrentUsedWeight.Size = new System.Drawing.Size(128, 20);
+            this.textBoxCurrentUsedWeight.TabIndex = 5;
+            this.textBoxCurrentUsedWeight.Text = "Current used weight: 0";
             // 
-            // textBoxTargetWeight
+            // textBoxTotalWeight
             // 
-            this.textBoxTargetWeight.Location = new System.Drawing.Point(316, 399);
-            this.textBoxTargetWeight.Name = "textBoxTargetWeight";
-            this.textBoxTargetWeight.Size = new System.Drawing.Size(128, 20);
-            this.textBoxTargetWeight.TabIndex = 6;
-            this.textBoxTargetWeight.Text = "Target Weight: 0";
+            this.textBoxTotalWeight.Location = new System.Drawing.Point(316, 399);
+            this.textBoxTotalWeight.Name = "textBoxTotalWeight";
+            this.textBoxTotalWeight.Size = new System.Drawing.Size(128, 20);
+            this.textBoxTotalWeight.TabIndex = 6;
+            this.textBoxTotalWeight.Text = "Total weight: 0";
             // 
             // buttonExit
             // 
@@ -115,14 +117,26 @@
             this.buttonExit.Text = "Exit";
             this.buttonExit.UseVisualStyleBackColor = true;
             // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(450, 283);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(199, 135);
+            this.textBox2.TabIndex = 9;
+            this.textBox2.Text = resources.GetString("textBox2.Text");
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
             // RenameOutcomesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.buttonExit);
-            this.Controls.Add(this.textBoxTargetWeight);
-            this.Controls.Add(this.textBoxCurrentWeight);
+            this.Controls.Add(this.textBoxTotalWeight);
+            this.Controls.Add(this.textBoxCurrentUsedWeight);
             this.Controls.Add(this.buttonRemoveSelected);
             this.Controls.Add(this.buttonAddOutcome);
             this.Controls.Add(this.buttonRemoveAll);
@@ -143,8 +157,9 @@
         private System.Windows.Forms.Button buttonRemoveAll;
         private System.Windows.Forms.Button buttonAddOutcome;
         private System.Windows.Forms.Button buttonRemoveSelected;
-        private System.Windows.Forms.TextBox textBoxCurrentWeight;
-        private System.Windows.Forms.TextBox textBoxTargetWeight;
+        private System.Windows.Forms.TextBox textBoxCurrentUsedWeight;
+        private System.Windows.Forms.TextBox textBoxTotalWeight;
         private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

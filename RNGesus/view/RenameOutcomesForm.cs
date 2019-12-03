@@ -12,13 +12,21 @@ namespace view
 {
     public partial class RenameOutcomesForm : Form
     {
-        public RenameOutcomesForm(List<WeightedNamedOutcome> outcomes)
-        {
+        public RenameOutcomesForm(List<WeightedNamedOutcome> outcomes, int totalWeight)
+        { 
             InitializeComponent();
             listBoxOutcomes.DataSource = outcomes;
+
+            //once
+            textBoxTotalWeight.Text = "Total weight: " + totalWeight;
+
+            //keep up-to-date
+            textBoxCurrentUsedWeight.Text = "Current used weight: " + WeightedNamedOutcome.GetTotalCombinedWeight();
         }
 
-        
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

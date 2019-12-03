@@ -13,8 +13,6 @@ namespace view
 {
     public partial class MainForm : Form
     {
-        private List<WeightedNamedOutcome> outcomes = new List<WeightedNamedOutcome>();
-
         public MainForm()
         {
             InitializeComponent();
@@ -37,13 +35,13 @@ namespace view
 
         private void buttonRename_Click(object sender, EventArgs e)
         {
-            outcomes.Add(new WeightedNamedOutcome("Stian1"));
-            outcomes.Add(new WeightedNamedOutcome("Stian2"));
-            outcomes.Add(new WeightedNamedOutcome("Stian3"));
-            outcomes.Add(new WeightedNamedOutcome("Stian4"));
-            outcomes.Add(new WeightedNamedOutcome("Stian5"));
+            new WeightedNamedOutcome("Stian1");
+            new WeightedNamedOutcome("Stian2");
+            new WeightedNamedOutcome("Stian3");
+            new WeightedNamedOutcome("Stian4");
+            new WeightedNamedOutcome("Stian5");
 
-            RenameOutcomesForm renameForm = new RenameOutcomesForm(outcomes);
+            RenameOutcomesForm renameForm = new RenameOutcomesForm(WeightedNamedOutcome.GetOutcomes(), Decimal.ToInt32(numericUpDownNumberOfOutcomes.Value));
             renameForm.ShowDialog();
             //open form
         }

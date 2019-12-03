@@ -48,9 +48,9 @@
             this.labelNumberOfOutcomes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNumberOfOutcomes.Location = new System.Drawing.Point(12, 62);
             this.labelNumberOfOutcomes.Name = "labelNumberOfOutcomes";
-            this.labelNumberOfOutcomes.Size = new System.Drawing.Size(309, 25);
+            this.labelNumberOfOutcomes.Size = new System.Drawing.Size(432, 25);
             this.labelNumberOfOutcomes.TabIndex = 0;
-            this.labelNumberOfOutcomes.Text = "How many possible outcomes?";
+            this.labelNumberOfOutcomes.Text = "How many possible outcomes(total weight)?";
             // 
             // labelNumberOfRepeats
             // 
@@ -105,7 +105,7 @@
             // 
             // numericUpDownNumberOfOutcomes
             // 
-            this.numericUpDownNumberOfOutcomes.Location = new System.Drawing.Point(328, 66);
+            this.numericUpDownNumberOfOutcomes.Location = new System.Drawing.Point(450, 67);
             this.numericUpDownNumberOfOutcomes.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -127,7 +127,7 @@
             // 
             // numericUpDownNumberOfRounds
             // 
-            this.numericUpDownNumberOfRounds.Location = new System.Drawing.Point(328, 125);
+            this.numericUpDownNumberOfRounds.Location = new System.Drawing.Point(450, 120);
             this.numericUpDownNumberOfRounds.Maximum = new decimal(new int[] {
             100000,
             0,
