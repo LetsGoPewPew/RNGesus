@@ -16,12 +16,15 @@ namespace view
         { 
             InitializeComponent();
             listBoxOutcomes.DataSource = outcomes;
-
-            //once
             textBoxTotalWeight.Text = "Total weight: " + totalWeight;
+            UpdateCurrentUsedWeight();
 
-            //keep up-to-date
-            textBoxCurrentUsedWeight.Text = "Current used weight: " + WeightedNamedOutcome.GetTotalCombinedWeight();
+            WeightedNamedOutcome.Outcomes.ListChanged += new ListChangedEventHandler(Outcomes_ListChanged);
+        }
+
+        private void Outcomes_ListChanged(object sender, ListChangedEventArgs e)
+        {
+            UpdateCurrentUsedWeight();
         }
 
         private void buttonAddOutcome_Click(object sender, EventArgs e)
@@ -42,6 +45,12 @@ namespace view
         private void buttonRemoveAll_Click(object sender, EventArgs e)
         {
             WeightedNamedOutcome.Outcomes.Clear();
+        }
+
+        public void UpdateCurrentUsedWeight()
+        {
+            //keep up-to-date
+            textBoxCurrentUsedWeight.Text = "Current used weight: " + WeightedNamedOutcome.GetTotalCombinedWeight();
         }
     }
 }

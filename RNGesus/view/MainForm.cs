@@ -35,12 +35,6 @@ namespace view
 
         private void buttonRename_Click(object sender, EventArgs e)
         {
-            new WeightedNamedOutcome("Stian1");
-            new WeightedNamedOutcome("Stian2");
-            new WeightedNamedOutcome("Stian3");
-            new WeightedNamedOutcome("Stian4");
-            new WeightedNamedOutcome("Stian5");
-
             RenameOutcomesForm renameForm = new RenameOutcomesForm(WeightedNamedOutcome.GetOutcomes(), Decimal.ToInt32(numericUpDownNumberOfOutcomes.Value));
             renameForm.ShowDialog();
             //open form

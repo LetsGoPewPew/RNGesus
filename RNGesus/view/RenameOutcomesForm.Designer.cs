@@ -99,15 +99,15 @@
             // 
             this.textBoxCurrentUsedWeight.Location = new System.Drawing.Point(12, 400);
             this.textBoxCurrentUsedWeight.Name = "textBoxCurrentUsedWeight";
-            this.textBoxCurrentUsedWeight.Size = new System.Drawing.Size(128, 20);
+            this.textBoxCurrentUsedWeight.Size = new System.Drawing.Size(159, 20);
             this.textBoxCurrentUsedWeight.TabIndex = 5;
             this.textBoxCurrentUsedWeight.Text = "Current used weight: 0";
             // 
             // textBoxTotalWeight
             // 
-            this.textBoxTotalWeight.Location = new System.Drawing.Point(316, 399);
+            this.textBoxTotalWeight.Location = new System.Drawing.Point(292, 399);
             this.textBoxTotalWeight.Name = "textBoxTotalWeight";
-            this.textBoxTotalWeight.Size = new System.Drawing.Size(128, 20);
+            this.textBoxTotalWeight.Size = new System.Drawing.Size(152, 20);
             this.textBoxTotalWeight.TabIndex = 6;
             this.textBoxTotalWeight.Text = "Total weight: 0";
             // 

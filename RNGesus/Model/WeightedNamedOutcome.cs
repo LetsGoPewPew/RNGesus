@@ -39,6 +39,8 @@ namespace Model
             return total;
         }
 
+
+
         public override string ToString()
         {
             return name + ", weight: " + weight;
