@@ -12,7 +12,7 @@ namespace view
 {
     public partial class RenameOutcomesForm : Form
     {
-        public RenameOutcomesForm(List<WeightedNamedOutcome> outcomes, int totalWeight)
+        public RenameOutcomesForm(BindingList<WeightedNamedOutcome> outcomes, int totalWeight)
         { 
             InitializeComponent();
             listBoxOutcomes.DataSource = outcomes;
@@ -24,9 +24,9 @@ namespace view
             textBoxCurrentUsedWeight.Text = "Current used weight: " + WeightedNamedOutcome.GetTotalCombinedWeight();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void buttonAddOutcome_Click(object sender, EventArgs e)
         {
-
+            new AddOutcomeForm().ShowDialog();
         }
     }
 }

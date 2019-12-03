@@ -82,6 +82,7 @@
             this.buttonAddOutcome.TabIndex = 3;
             this.buttonAddOutcome.Text = "Add outcome";
             this.buttonAddOutcome.UseVisualStyleBackColor = true;
+            this.buttonAddOutcome.Click += new System.EventHandler(this.buttonAddOutcome_Click);
             // 
             // buttonRemoveSelected
             // 
@@ -126,7 +127,6 @@
             this.textBox2.Size = new System.Drawing.Size(199, 135);
             this.textBox2.TabIndex = 9;
             this.textBox2.Text = resources.GetString("textBox2.Text");
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // RenameOutcomesForm
             // 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,8 +10,8 @@ namespace Model
     public class WeightedNamedOutcome
     {
 
-        public static List<WeightedNamedOutcome> Outcomes = new List<WeightedNamedOutcome>();
-        public static List<WeightedNamedOutcome> GetOutcomes()
+        public static BindingList<WeightedNamedOutcome> Outcomes = new BindingList<WeightedNamedOutcome>();
+        public static BindingList<WeightedNamedOutcome> GetOutcomes()
         {
             return Outcomes;
         }
