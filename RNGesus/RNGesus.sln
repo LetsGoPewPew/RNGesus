@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "view", "view\view.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{FFD13C7D-A55E-49CD-A7D1-FC3E6A95B14A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{F7C1A24C-87B1-421C-A55E-C5411202670D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RNGesus.Tests", "RNGesus.Tests\RNGesus.Tests.csproj", "{36A7B51F-12EF-470C-A930-C7B322E24D4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{FFD13C7D-A55E-49CD-A7D1-FC3E6A95B14A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFD13C7D-A55E-49CD-A7D1-FC3E6A95B14A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFD13C7D-A55E-49CD-A7D1-FC3E6A95B14A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7C1A24C-87B1-421C-A55E-C5411202670D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7C1A24C-87B1-421C-A55E-C5411202670D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7C1A24C-87B1-421C-A55E-C5411202670D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7C1A24C-87B1-421C-A55E-C5411202670D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36A7B51F-12EF-470C-A930-C7B322E24D4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36A7B51F-12EF-470C-A930-C7B322E24D4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36A7B51F-12EF-470C-A930-C7B322E24D4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36A7B51F-12EF-470C-A930-C7B322E24D4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
