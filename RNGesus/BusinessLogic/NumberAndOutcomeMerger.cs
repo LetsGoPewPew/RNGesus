@@ -40,5 +40,10 @@ namespace BusinessLogic
             return outcomes;
         }
 
+        private void AssignResultsToOutcomes()
+        {
+            //TODO: Find out how to assign results to outcomes in a optimal way.
+        }
+
     }
 }
