@@ -119,6 +119,7 @@
             this.buttonSaveAndExit.TabIndex = 7;
             this.buttonSaveAndExit.Text = "Save and Exit";
             this.buttonSaveAndExit.UseVisualStyleBackColor = true;
+            this.buttonSaveAndExit.Click += new System.EventHandler(this.buttonSaveAndExit_Click);
             // 
             // textBoxWeightExplaination
             // 

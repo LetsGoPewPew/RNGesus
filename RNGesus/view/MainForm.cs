@@ -16,26 +16,18 @@ namespace view
         public MainForm()
         {
             InitializeComponent();
-
-            List<int> results = new List<int>();
-
-            Rng rng = new Rng(10, 3);
-            results = rng.GenerateAllResults(results);
-
-            foreach(int i in results)
-            {
-                Console.WriteLine(i);
-            }
         }
 
         private void buttonGenerate_Click(object sender, EventArgs e)
         {
-            
+            SimulationRepresentationForm simulationRepresentationForm = 
+                new SimulationRepresentationForm(Decimal.ToInt32(numericUpDownTotalWeight.Value), Decimal.ToInt32(numericUpDownNumberOfRounds.Value));
+            simulationRepresentationForm.Show();
         }
 
         private void buttonRename_Click(object sender, EventArgs e)
         {
-            RenameOutcomesForm renameForm = new RenameOutcomesForm(WeightedNamedOutcome.GetOutcomes(), Decimal.ToInt32(numericUpDownNumberOfOutcomes.Value));
+            RenameOutcomesForm renameForm = new RenameOutcomesForm(Decimal.ToInt32(numericUpDownTotalWeight.Value));
             renameForm.ShowDialog();
             //open form
         }

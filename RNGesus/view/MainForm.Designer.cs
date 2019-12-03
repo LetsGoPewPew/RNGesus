@@ -35,10 +35,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.buttonGenerate = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDownNumberOfOutcomes = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownTotalWeight = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownNumberOfRounds = new System.Windows.Forms.NumericUpDown();
             this.buttonRename = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfOutcomes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTotalWeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfRounds)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,23 +103,23 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Fill out the values and click generate to get your result:";
             // 
-            // numericUpDownNumberOfOutcomes
+            // numericUpDownTotalWeight
             // 
-            this.numericUpDownNumberOfOutcomes.Location = new System.Drawing.Point(450, 67);
-            this.numericUpDownNumberOfOutcomes.Maximum = new decimal(new int[] {
+            this.numericUpDownTotalWeight.Location = new System.Drawing.Point(450, 67);
+            this.numericUpDownTotalWeight.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
-            this.numericUpDownNumberOfOutcomes.Minimum = new decimal(new int[] {
+            this.numericUpDownTotalWeight.Minimum = new decimal(new int[] {
             2,
             0,
             0,
             0});
-            this.numericUpDownNumberOfOutcomes.Name = "numericUpDownNumberOfOutcomes";
-            this.numericUpDownNumberOfOutcomes.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDownNumberOfOutcomes.TabIndex = 7;
-            this.numericUpDownNumberOfOutcomes.Value = new decimal(new int[] {
+            this.numericUpDownTotalWeight.Name = "numericUpDownTotalWeight";
+            this.numericUpDownTotalWeight.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDownTotalWeight.TabIndex = 7;
+            this.numericUpDownTotalWeight.Value = new decimal(new int[] {
             2,
             0,
             0,
@@ -165,7 +165,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.buttonRename);
             this.Controls.Add(this.numericUpDownNumberOfRounds);
-            this.Controls.Add(this.numericUpDownNumberOfOutcomes);
+            this.Controls.Add(this.numericUpDownTotalWeight);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonGenerate);
             this.Controls.Add(this.label1);
@@ -175,7 +175,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "MainPage";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfOutcomes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTotalWeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfRounds)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -190,7 +190,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonGenerate;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numericUpDownNumberOfOutcomes;
+        private System.Windows.Forms.NumericUpDown numericUpDownTotalWeight;
         private System.Windows.Forms.NumericUpDown numericUpDownNumberOfRounds;
         private System.Windows.Forms.Button buttonRename;
     }

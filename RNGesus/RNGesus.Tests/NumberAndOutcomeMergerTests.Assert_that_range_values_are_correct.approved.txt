@@ -1,0 +1,10 @@
+﻿From: 1 To: 2  ---  Stian1
+From: 2 To: 4  ---  Stian2
+From: 4 To: 7  ---  Stian3
+From: 7 To: 11  ---  Stian4
+From: 11 To: 16  ---  Stian5
+From: 16 To: 22  ---  Stian6
+From: 22 To: 29  ---  Stian7
+From: 29 To: 37  ---  Stian8
+From: 37 To: 46  ---  Stian9
+From: 46 To: 56  ---  Stian10

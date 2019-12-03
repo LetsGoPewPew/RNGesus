@@ -12,10 +12,10 @@ namespace view
 {
     public partial class RenameOutcomesForm : Form
     {
-        public RenameOutcomesForm(BindingList<WeightedNamedOutcome> outcomes, int totalWeight)
+        public RenameOutcomesForm(int totalWeight)
         { 
             InitializeComponent();
-            listBoxOutcomes.DataSource = outcomes;
+            listBoxOutcomes.DataSource = WeightedNamedOutcome.Outcomes;
             textBoxTotalWeight.Text = "Total weight: " + totalWeight;
             UpdateCurrentUsedWeight();
 
@@ -38,7 +38,6 @@ namespace view
             {
                 return;
             }
-
             WeightedNamedOutcome.Outcomes.Remove(listBoxOutcomes.SelectedItem as WeightedNamedOutcome);
         }
 
@@ -51,6 +50,11 @@ namespace view
         {
             //keep up-to-date
             textBoxCurrentUsedWeight.Text = "Current used weight: " + WeightedNamedOutcome.GetTotalCombinedWeight();
+        }
+
+        private void buttonSaveAndExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
