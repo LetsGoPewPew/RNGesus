@@ -13,7 +13,7 @@ namespace RNGesus.Tests
 {
     [UseReporter(typeof(VisualStudioReporter))]
     [TestFixture]
-    class NumberAndOutcomeMergerTests
+    class ResultAndOutcomeMergerTests
     {
         private BindingList<WeightedNamedOutcome> outcomes = new BindingList<WeightedNamedOutcome>();
         private List<int> results = new List<int>();
