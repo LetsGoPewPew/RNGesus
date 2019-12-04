@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <None Remove="NumberAndOutcomeMergerTests.Assert_that_range_values_are_correct.approved.txt" />
+    <None Remove="ResultAndOutcomeMergerTests.Assert_that_range_values_are_correct.approved.txt" />
+    <None Remove="ResultAndOutcomeMergerTests.Assert_that_range_values_are_correct.received.txt" />
   </ItemGroup>
 
   <ItemGroup>
