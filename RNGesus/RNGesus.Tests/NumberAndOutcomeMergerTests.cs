@@ -18,7 +18,7 @@ namespace RNGesus.Tests
     {
         private BindingList<WeightedNamedOutcome> outcomes = new BindingList<WeightedNamedOutcome>();
         private List<int> results = new List<int>();
-        private int totalWeight = 110;
+        private readonly int totalWeight = 110;
 
         [OneTimeSetUp]
         public void Init()
@@ -99,7 +99,7 @@ namespace RNGesus.Tests
             for(int i = 0; i < result.Length; i++)
             {
                result[i] = outcomeResults[i].Occurances;
-               Console.WriteLine(outcomeResults[i].ToString() + " " + outcomeResults[i].Occurances);
+               Console.WriteLine(outcomeResults[i].ToString() + " | occurances:" + outcomeResults[i].Occurances);
             }
 
             CollectionAssert.AreEqual(expected, result);

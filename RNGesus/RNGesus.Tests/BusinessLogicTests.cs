@@ -9,8 +9,8 @@ namespace RNGesus.Tests
     public class Tests
     {
         private Rng rng1;
-        private int outcomes = 12;
-        private int repeats = 100;
+        private readonly int outcomes = 12;
+        private readonly int repeats = 100;
         private List<int> results = new List<int>();
 
         [SetUp]
@@ -36,15 +36,15 @@ namespace RNGesus.Tests
         [Test]
         public void Assert_that_percentage_is_returned_without_decimals()
         {
-            string result = Uncategorized.GetPercentageXOfY(50, 100);
-            string expected = "50%";
+            double result = Uncategorized.GetPercentageXOfY(50, 100);
+            double expected = 50;
             Assert.That(result, Is.EqualTo(expected));
         }
         [Test]
         public void Assert_that_percentage_has_two_decimals_when_needed()
         {
-            string result = Uncategorized.GetPercentageXOfY(1111, 10000);
-            string expected = "11.11%";
+            double result = Uncategorized.GetPercentageXOfY(1111, 10000);
+            double expected = 11.11;
             Assert.That(result, Is.EqualTo(expected));
         }
 

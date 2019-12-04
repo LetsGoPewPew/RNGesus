@@ -18,17 +18,22 @@ namespace Model
         private String name;
         private int weight;
         private int occurances;
+        private double chanceToOccur;
 
         public String Name { get => name; set => name = value; }
         public int Weight { get => weight; set => weight = value; }
         public int Occurances { get => occurances; set => occurances = value; }
+        public double ChanceToOccur { get => chanceToOccur; set => chanceToOccur = value; }
 
-        public WeightedNamedOutcome(String name, int weight = 1, bool testing = false)
+        public WeightedNamedOutcome(String name, int weight = 1, bool autoAddToList = true)
         {
             this.name = name;
             this.Weight = weight;
             this.Id = ++outcomeCounter;
-            Outcomes.Add(this);
+            if(autoAddToList)
+            {
+                Outcomes.Add(this);
+            }
         }
 
         public void SetRange(int startRange, int stopRange)

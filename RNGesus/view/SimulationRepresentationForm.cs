@@ -15,26 +15,39 @@ namespace view
     public partial class SimulationRepresentationForm : Form
     {
         private int totalWeight;
-        private int numberOfRounds;
+        private int numberOfRepeats;
         private int totalUsedWeight;
 
-        public SimulationRepresentationForm(int totalWeight, int numberOfRounds, BindingList<WeightedNamedOutcome> outcomes, List<int>results)
+        public SimulationRepresentationForm(int totalWeight, int numberOfRepeats, BindingList<WeightedNamedOutcome> outcomes, List<int>results)
         {
             InitializeComponent();
-
+            listViewSimulationResult.View = View.Details;
+            FillListView(outcomes);
+            
             this.totalWeight = totalWeight;
-            this.numberOfRounds = numberOfRounds;
+            this.numberOfRepeats = numberOfRepeats;
             this.totalUsedWeight = Uncategorized.GetTotalCombinedWeight(outcomes);
             InitializeTextValues();
         }
 
+        private void FillListView(BindingList<WeightedNamedOutcome> outcomes)
+        {
+            foreach(WeightedNamedOutcome outcome in outcomes)
+            {
+                ListViewItem item = new ListViewItem(outcome.Name);
+                item.SubItems.Add("" + outcome.Weight);
+                item.SubItems.Add("" + outcome.Occurances);
+                item.SubItems.Add(outcome.ChanceToOccur + "%");
+                item.SubItems.Add("percent of occurances");
+
+                listViewSimulationResult.Items.Add(item);
+            }
+        }
+
         private void InitializeTextValues()
         {
+            textBoxNumberOfRepeats.Text = "Number of repeats: " + numberOfRepeats;
             textBoxTotalWeight.Text = "Total weight: " + totalWeight;
-            textBoxWeightUsed.Text = "Weight used: " + totalUsedWeight;
-            textBoxNothingWeight.Text = "Weight leftover for 'nothing' outcome: " + GetLeftoverWeight();
-            textBoxWeightUsedPercent.Text = Uncategorized.GetPercentageXOfY(totalUsedWeight, totalWeight);
-            textBoxNothingWeightPercent.Text = Uncategorized.GetPercentageXOfY(GetLeftoverWeight(), totalWeight);
         }
 
         private int GetLeftoverWeight()

@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.textBoxTotalWeight = new System.Windows.Forms.TextBox();
-            this.textBoxWeightUsed = new System.Windows.Forms.TextBox();
-            this.textBoxNothingWeight = new System.Windows.Forms.TextBox();
-            this.textBoxWeightUsedPercent = new System.Windows.Forms.TextBox();
-            this.textBoxNothingWeightPercent = new System.Windows.Forms.TextBox();
-            this.textBoxRounds = new System.Windows.Forms.TextBox();
-            this.listViewSimulationResults = new System.Windows.Forms.ListView();
+            this.textBoxNumberOfRepeats = new System.Windows.Forms.TextBox();
+            this.listViewSimulationResult = new System.Windows.Forms.ListView();
+            this.name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.weight = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.occurances = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chanceToOccur = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // textBoxTotalWeight
@@ -47,73 +47,58 @@
             this.textBoxTotalWeight.TabIndex = 1;
             this.textBoxTotalWeight.Text = "Total weight: ";
             // 
-            // textBoxWeightUsed
+            // textBoxNumberOfRepeats
             // 
-            this.textBoxWeightUsed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxWeightUsed.Location = new System.Drawing.Point(395, 12);
-            this.textBoxWeightUsed.Name = "textBoxWeightUsed";
-            this.textBoxWeightUsed.ReadOnly = true;
-            this.textBoxWeightUsed.Size = new System.Drawing.Size(317, 26);
-            this.textBoxWeightUsed.TabIndex = 2;
-            this.textBoxWeightUsed.Text = "Weight used: ";
+            this.textBoxNumberOfRepeats.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNumberOfRepeats.Location = new System.Drawing.Point(12, 44);
+            this.textBoxNumberOfRepeats.Name = "textBoxNumberOfRepeats";
+            this.textBoxNumberOfRepeats.Size = new System.Drawing.Size(298, 26);
+            this.textBoxNumberOfRepeats.TabIndex = 6;
+            this.textBoxNumberOfRepeats.Text = "Total repeats:";
             // 
-            // textBoxNothingWeight
+            // listViewSimulationResult
             // 
-            this.textBoxNothingWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNothingWeight.Location = new System.Drawing.Point(395, 44);
-            this.textBoxNothingWeight.Name = "textBoxNothingWeight";
-            this.textBoxNothingWeight.ReadOnly = true;
-            this.textBoxNothingWeight.Size = new System.Drawing.Size(317, 26);
-            this.textBoxNothingWeight.TabIndex = 3;
-            this.textBoxNothingWeight.Text = "Weight leftover for \"nothing\" outcome: ";
+            this.listViewSimulationResult.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.name,
+            this.weight,
+            this.occurances,
+            this.chanceToOccur});
+            this.listViewSimulationResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewSimulationResult.HideSelection = false;
+            this.listViewSimulationResult.Location = new System.Drawing.Point(12, 76);
+            this.listViewSimulationResult.MultiSelect = false;
+            this.listViewSimulationResult.Name = "listViewSimulationResult";
+            this.listViewSimulationResult.Size = new System.Drawing.Size(776, 362);
+            this.listViewSimulationResult.TabIndex = 7;
+            this.listViewSimulationResult.UseCompatibleStateImageBehavior = false;
             // 
-            // textBoxWeightUsedPercent
+            // name
             // 
-            this.textBoxWeightUsedPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxWeightUsedPercent.Location = new System.Drawing.Point(718, 12);
-            this.textBoxWeightUsedPercent.Name = "textBoxWeightUsedPercent";
-            this.textBoxWeightUsedPercent.Size = new System.Drawing.Size(63, 26);
-            this.textBoxWeightUsedPercent.TabIndex = 4;
-            this.textBoxWeightUsedPercent.Text = "00.00%";
+            this.name.Text = "Name";
+            this.name.Width = 300;
             // 
-            // textBoxNothingWeightPercent
+            // weight
             // 
-            this.textBoxNothingWeightPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNothingWeightPercent.Location = new System.Drawing.Point(718, 44);
-            this.textBoxNothingWeightPercent.Name = "textBoxNothingWeightPercent";
-            this.textBoxNothingWeightPercent.Size = new System.Drawing.Size(63, 26);
-            this.textBoxNothingWeightPercent.TabIndex = 5;
-            this.textBoxNothingWeightPercent.Text = "00.00%";
+            this.weight.Text = "Weight";
+            this.weight.Width = 100;
             // 
-            // textBoxRounds
+            // occurances
             // 
-            this.textBoxRounds.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxRounds.Location = new System.Drawing.Point(12, 44);
-            this.textBoxRounds.Name = "textBoxRounds";
-            this.textBoxRounds.Size = new System.Drawing.Size(298, 26);
-            this.textBoxRounds.TabIndex = 6;
-            this.textBoxRounds.Text = "Total rounds:";
+            this.occurances.Text = "Occurances";
+            this.occurances.Width = 100;
             // 
-            // listViewSimulationResults
+            // chanceToOccur
             // 
-            this.listViewSimulationResults.HideSelection = false;
-            this.listViewSimulationResults.Location = new System.Drawing.Point(13, 77);
-            this.listViewSimulationResults.Name = "listViewSimulationResults";
-            this.listViewSimulationResults.Size = new System.Drawing.Size(775, 361);
-            this.listViewSimulationResults.TabIndex = 7;
-            this.listViewSimulationResults.UseCompatibleStateImageBehavior = false;
+            this.chanceToOccur.Text = "Chance to occur per repeat";
+            this.chanceToOccur.Width = 300;
             // 
             // SimulationRepresentationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listViewSimulationResults);
-            this.Controls.Add(this.textBoxRounds);
-            this.Controls.Add(this.textBoxNothingWeightPercent);
-            this.Controls.Add(this.textBoxWeightUsedPercent);
-            this.Controls.Add(this.textBoxNothingWeight);
-            this.Controls.Add(this.textBoxWeightUsed);
+            this.Controls.Add(this.listViewSimulationResult);
+            this.Controls.Add(this.textBoxNumberOfRepeats);
             this.Controls.Add(this.textBoxTotalWeight);
             this.Name = "SimulationRepresentationForm";
             this.Text = "SimulationRepresentationForm";
@@ -125,11 +110,11 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBoxTotalWeight;
-        private System.Windows.Forms.TextBox textBoxWeightUsed;
-        private System.Windows.Forms.TextBox textBoxNothingWeight;
-        private System.Windows.Forms.TextBox textBoxWeightUsedPercent;
-        private System.Windows.Forms.TextBox textBoxNothingWeightPercent;
-        private System.Windows.Forms.TextBox textBoxRounds;
-        private System.Windows.Forms.ListView listViewSimulationResults;
+        private System.Windows.Forms.TextBox textBoxNumberOfRepeats;
+        private System.Windows.Forms.ListView listViewSimulationResult;
+        private System.Windows.Forms.ColumnHeader name;
+        private System.Windows.Forms.ColumnHeader weight;
+        private System.Windows.Forms.ColumnHeader occurances;
+        private System.Windows.Forms.ColumnHeader chanceToOccur;
     }
 }

@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NumberAndOutcomeMerger.cs" />
+    <Compile Include="ResultAndOutcomeMerger.cs" />
     <Compile Include="Uncategorized.cs" />
     <Compile Include="Rng.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
