@@ -30,6 +30,19 @@ namespace BusinessLogic
             return outcomes;
         }
 
+        public static void ResetAllOccurances(BindingList<WeightedNamedOutcome> outcomes)
+        {
+            foreach(WeightedNamedOutcome outcome in outcomes)
+            {
+                ResetOccurance(outcome);
+            }
+        }
+
+        private static void ResetOccurance(WeightedNamedOutcome outcome)
+        {
+            outcome.Occurances = 0;
+        }
+
         public static BindingList<WeightedNamedOutcome> AddNothingOutcome(BindingList<WeightedNamedOutcome> outcomes, int totalWeight, int usedWeight)
         {
             int nothingWeight = totalWeight - usedWeight;

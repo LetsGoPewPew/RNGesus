@@ -91,7 +91,7 @@
             this.buttonGenerate.TabIndex = 4;
             this.buttonGenerate.Text = "Generate!";
             this.buttonGenerate.UseVisualStyleBackColor = true;
-            this.buttonGenerate.Click += new System.EventHandler(this.buttonGenerate_Click);
+            this.buttonGenerate.Click += new System.EventHandler(this.ButtonGenerate_Click);
             // 
             // label2
             // 

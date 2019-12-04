@@ -18,8 +18,10 @@ namespace view
             InitializeComponent();
         }
 
-        private void buttonGenerate_Click(object sender, EventArgs e)
+        private void ButtonGenerate_Click(object sender, EventArgs e)
         {
+            ResetSimulationData();
+
             if(!IsTotalWeightHigherOrEqualToUsedWeight())
             {
                 MessageBox.Show("The total weight must be higher than or equal to the weight used by your outcomes.", "Weight not legal(get a lawyer)", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -37,6 +39,11 @@ namespace view
             SimulationRepresentationForm simulationRepresentationForm =
                 new SimulationRepresentationForm(totalWeight, numberOfRepeats, WeightedNamedOutcome.Outcomes, results);
             simulationRepresentationForm.Show();
+        }
+
+        private void ResetSimulationData()
+        {
+            Uncategorized.ResetAllOccurances(WeightedNamedOutcome.Outcomes);
         }
 
         private bool IsTotalWeightHigherOrEqualToUsedWeight()
