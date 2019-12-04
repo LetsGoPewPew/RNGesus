@@ -8,7 +8,6 @@ using System.Collections.Generic;
 using ApprovalTests.Reporters.Windows;
 using System.ComponentModel;
 using System;
-using System.Diagnostics;
 
 namespace RNGesus.Tests
 {
