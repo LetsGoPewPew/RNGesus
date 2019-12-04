@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Model;
+using BusinessLogic;
 namespace view
 {
     public partial class RenameOutcomesForm : Form
@@ -49,7 +50,7 @@ namespace view
         public void UpdateCurrentUsedWeight()
         {
             //keep up-to-date
-            textBoxCurrentUsedWeight.Text = "Current used weight: " + WeightedNamedOutcome.GetTotalCombinedWeight();
+            textBoxCurrentUsedWeight.Text = "Current used weight: " + Uncategorized.GetTotalCombinedWeight(WeightedNamedOutcome.Outcomes);
         }
 
         private void buttonSaveAndExit_Click(object sender, EventArgs e)

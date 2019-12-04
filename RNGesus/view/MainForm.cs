@@ -20,8 +20,13 @@ namespace view
 
         private void buttonGenerate_Click(object sender, EventArgs e)
         {
+            int totalWeight = Decimal.ToInt32(numericUpDownTotalWeight.Value);
+            int numberOfRepeats = Decimal.ToInt32(numericUpDownNumberOfRounds.Value);
+            Rng rng = new Rng(numberOfRepeats, totalWeight);
+            List<int> results = rng.GenerateAllResults();
+
             SimulationRepresentationForm simulationRepresentationForm = 
-                new SimulationRepresentationForm(Decimal.ToInt32(numericUpDownTotalWeight.Value), Decimal.ToInt32(numericUpDownNumberOfRounds.Value));
+                new SimulationRepresentationForm(totalWeight, numberOfRepeats, WeightedNamedOutcome.Outcomes, results);
             simulationRepresentationForm.Show();
         }
 

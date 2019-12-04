@@ -17,15 +17,14 @@ namespace view
         private int totalWeight;
         private int numberOfRounds;
         private int totalUsedWeight;
-        private Uncategorized uncategorized = new Uncategorized();
 
-        public SimulationRepresentationForm(int totalWeight, int numberOfRounds)
+        public SimulationRepresentationForm(int totalWeight, int numberOfRounds, BindingList<WeightedNamedOutcome> outcomes, List<int>results)
         {
             InitializeComponent();
 
             this.totalWeight = totalWeight;
             this.numberOfRounds = numberOfRounds;
-            this.totalUsedWeight = WeightedNamedOutcome.GetTotalCombinedWeight();
+            this.totalUsedWeight = Uncategorized.GetTotalCombinedWeight(outcomes);
             InitializeTextValues();
         }
 
@@ -34,21 +33,13 @@ namespace view
             textBoxTotalWeight.Text = "Total weight: " + totalWeight;
             textBoxWeightUsed.Text = "Weight used: " + totalUsedWeight;
             textBoxNothingWeight.Text = "Weight leftover for 'nothing' outcome: " + GetLeftoverWeight();
-            textBoxWeightUsedPercent.Text = uncategorized.GetPercentageXOfY(totalUsedWeight, totalWeight);
-            textBoxNothingWeightPercent.Text = uncategorized.GetPercentageXOfY(GetLeftoverWeight(), totalWeight);
+            textBoxWeightUsedPercent.Text = Uncategorized.GetPercentageXOfY(totalUsedWeight, totalWeight);
+            textBoxNothingWeightPercent.Text = Uncategorized.GetPercentageXOfY(GetLeftoverWeight(), totalWeight);
         }
 
         private int GetLeftoverWeight()
         {
             return totalWeight - totalUsedWeight;
-        }
-
-        private void doStuff()
-        {
-            foreach(WeightedNamedOutcome outcome in WeightedNamedOutcome.Outcomes)
-            {
-                
-            }
         }
     }
 }

@@ -17,7 +17,7 @@ namespace RNGesus.Tests
         public void Setup()
         {
             rng1 = new Rng(repeats, outcomes);
-            rng1.GenerateAllResults(results);
+            results = rng1.GenerateAllResults();
         }
 
         [Test]
@@ -36,16 +36,14 @@ namespace RNGesus.Tests
         [Test]
         public void Assert_that_percentage_is_returned_without_decimals()
         {
-            Uncategorized uncat = new Uncategorized();
-            string result = uncat.GetPercentageXOfY(50, 100);
+            string result = Uncategorized.GetPercentageXOfY(50, 100);
             string expected = "50%";
             Assert.That(result, Is.EqualTo(expected));
         }
         [Test]
         public void Assert_that_percentage_has_two_decimals_when_needed()
         {
-            Uncategorized uncat = new Uncategorized();
-            string result = uncat.GetPercentageXOfY(1111, 10000);
+            string result = Uncategorized.GetPercentageXOfY(1111, 10000);
             string expected = "11.11%";
             Assert.That(result, Is.EqualTo(expected));
         }

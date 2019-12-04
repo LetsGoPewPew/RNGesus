@@ -12,15 +12,24 @@ namespace Model
 
         public static BindingList<WeightedNamedOutcome> Outcomes = new BindingList<WeightedNamedOutcome>();
         public static int outcomeCounter = 0;
+
         private readonly int Id;
-
         private Range range;
-
         private String name;
         private int weight;
+        private int occurances;
 
         public String Name { get => name; set => name = value; }
         public int Weight { get => weight; set => weight = value; }
+        public int Occurances { get => occurances; set => occurances = value; }
+
+        public WeightedNamedOutcome(String name, int weight = 1, bool testing = false)
+        {
+            this.name = name;
+            this.Weight = weight;
+            this.Id = ++outcomeCounter;
+            Outcomes.Add(this);
+        }
 
         public void SetRange(int startRange, int stopRange)
         {
@@ -33,31 +42,11 @@ namespace Model
                 range.startRange = startRange;
                 range.stopRange = stopRange;
             }
-            
         }
 
         public Range GetRange()
         {
             return range;
-        }
-
-        public WeightedNamedOutcome(String name, int weight = 1, bool testing = false)
-        {
-            this.name = name;
-            this.Weight = weight;
-            this.Id = ++outcomeCounter;
-
-            Outcomes.Add(this);
-        }
-        
-        public static int GetTotalCombinedWeight()
-        {
-            int total = 0;
-            foreach (WeightedNamedOutcome i in Outcomes)
-            {
-                total += i.Weight;
-            }
-            return total;
         }
 
         public override string ToString()

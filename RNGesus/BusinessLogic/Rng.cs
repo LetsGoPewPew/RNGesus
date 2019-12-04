@@ -9,21 +9,22 @@ namespace BusinessLogic
     public class Rng
     {
         private int numberOfRepeats;
-        private int numberOfOutcomes;
+        private int totalWeight;
 
         public int NumberOfRepeats { get => numberOfRepeats; set => numberOfRepeats = value; }
-        public int NumberOfOutcomes { get => numberOfOutcomes; set => numberOfOutcomes = value; }
+        public int TotalWeight { get => totalWeight; set => totalWeight = value; }
 
         public Random rng = new Random();
 
-        public Rng(int numberOfRepeats, int numberOfOutcomes)
+        public Rng(int numberOfRepeats, int totalWeight)
         {
-            this.numberOfOutcomes = numberOfOutcomes;
+            this.totalWeight = totalWeight;
             this.numberOfRepeats = numberOfRepeats;
         }
 
-        public List<int> GenerateAllResults(List<int> results)
+        public List<int> GenerateAllResults()
         {
+            List<int> results = new List<int>();
             for(int i = 0; i < numberOfRepeats; i++)
             {
                 results.Add(GenerateResult());
@@ -33,7 +34,7 @@ namespace BusinessLogic
 
         private int GenerateResult()
         {
-            return rng.Next(1, numberOfOutcomes + 1);
+            return rng.Next(1, totalWeight + 1);
         }
     }
 }
