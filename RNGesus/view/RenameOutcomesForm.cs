@@ -51,5 +51,10 @@ namespace view
         {
             this.Close();
         }
+
+        private void buttonLoadFromJsonFile_Click(object sender, EventArgs e)
+        {
+            //LoadJson();
+        }
     }
 }

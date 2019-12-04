@@ -3,7 +3,7 @@ using System.ComponentModel;
 
 namespace Model
 {
-    public class WeightedNamedOutcome
+    public class WeightedNamedOutcome 
     {
 
         public static BindingList<WeightedNamedOutcome> Outcomes = new BindingList<WeightedNamedOutcome>();

@@ -1,0 +1,10 @@
+﻿Name:Stian1 Weight: 1 Occurances: 0 Chance to occur:0
+Name:Stian2 Weight: 2 Occurances: 0 Chance to occur:0
+Name:Stian3 Weight: 3 Occurances: 0 Chance to occur:0
+Name:Stian4 Weight: 4 Occurances: 0 Chance to occur:0
+Name:Stian5 Weight: 5 Occurances: 0 Chance to occur:0
+Name:Stian6 Weight: 6 Occurances: 0 Chance to occur:0
+Name:Stian7 Weight: 7 Occurances: 0 Chance to occur:0
+Name:Stian8 Weight: 8 Occurances: 0 Chance to occur:0
+Name:Stian9 Weight: 9 Occurances: 0 Chance to occur:0
+Name:Stian10 Weight: 10 Occurances: 0 Chance to occur:0

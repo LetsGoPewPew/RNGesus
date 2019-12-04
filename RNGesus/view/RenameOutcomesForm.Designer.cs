@@ -39,6 +39,8 @@
             this.textBoxTotalWeight = new System.Windows.Forms.TextBox();
             this.buttonSaveAndExit = new System.Windows.Forms.Button();
             this.textBoxWeightExplaination = new System.Windows.Forms.TextBox();
+            this.buttonSaveAsJsonFile = new System.Windows.Forms.Button();
+            this.buttonLoadFromJsonFile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listViewOutcomes
@@ -131,11 +133,32 @@
             this.textBoxWeightExplaination.TabIndex = 9;
             this.textBoxWeightExplaination.Text = resources.GetString("textBoxWeightExplaination.Text");
             // 
+            // buttonSaveAsJsonFile
+            // 
+            this.buttonSaveAsJsonFile.Location = new System.Drawing.Point(466, 143);
+            this.buttonSaveAsJsonFile.Name = "buttonSaveAsJsonFile";
+            this.buttonSaveAsJsonFile.Size = new System.Drawing.Size(152, 23);
+            this.buttonSaveAsJsonFile.TabIndex = 10;
+            this.buttonSaveAsJsonFile.Text = "Save as JSON file";
+            this.buttonSaveAsJsonFile.UseVisualStyleBackColor = true;
+            // 
+            // buttonLoadFromJsonFile
+            // 
+            this.buttonLoadFromJsonFile.Location = new System.Drawing.Point(466, 172);
+            this.buttonLoadFromJsonFile.Name = "buttonLoadFromJsonFile";
+            this.buttonLoadFromJsonFile.Size = new System.Drawing.Size(152, 23);
+            this.buttonLoadFromJsonFile.TabIndex = 11;
+            this.buttonLoadFromJsonFile.Text = "Load outcomes from JSON file";
+            this.buttonLoadFromJsonFile.UseVisualStyleBackColor = true;
+            this.buttonLoadFromJsonFile.Click += new System.EventHandler(this.buttonLoadFromJsonFile_Click);
+            // 
             // RenameOutcomesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonLoadFromJsonFile);
+            this.Controls.Add(this.buttonSaveAsJsonFile);
             this.Controls.Add(this.textBoxWeightExplaination);
             this.Controls.Add(this.buttonSaveAndExit);
             this.Controls.Add(this.textBoxTotalWeight);
@@ -164,5 +187,7 @@
         private System.Windows.Forms.TextBox textBoxTotalWeight;
         private System.Windows.Forms.Button buttonSaveAndExit;
         private System.Windows.Forms.TextBox textBoxWeightExplaination;
+        private System.Windows.Forms.Button buttonSaveAsJsonFile;
+        private System.Windows.Forms.Button buttonLoadFromJsonFile;
     }
 }

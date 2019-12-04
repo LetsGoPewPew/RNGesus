@@ -22,16 +22,16 @@ namespace RNGesus.Tests
         [OneTimeSetUp]
         public void Init()
         {
-            outcomes.Add(new WeightedNamedOutcome("Stian1", 1, true));
-            outcomes.Add(new WeightedNamedOutcome("Stian2", 2, true));
-            outcomes.Add(new WeightedNamedOutcome("Stian3", 3, true));
-            outcomes.Add(new WeightedNamedOutcome("Stian4", 4, true));
-            outcomes.Add(new WeightedNamedOutcome("Stian5", 5, true));
-            outcomes.Add(new WeightedNamedOutcome("Stian6", 6, true));
-            outcomes.Add(new WeightedNamedOutcome("Stian7", 7, true));
-            outcomes.Add(new WeightedNamedOutcome("Stian8", 8, true));
-            outcomes.Add(new WeightedNamedOutcome("Stian9", 9, true));
-            outcomes.Add(new WeightedNamedOutcome("Stian10", 10, true));
+            outcomes.Add(new WeightedNamedOutcome("Stian1", 1, false));
+            outcomes.Add(new WeightedNamedOutcome("Stian2", 2, false));
+            outcomes.Add(new WeightedNamedOutcome("Stian3", 3, false));
+            outcomes.Add(new WeightedNamedOutcome("Stian4", 4, false));
+            outcomes.Add(new WeightedNamedOutcome("Stian5", 5, false));
+            outcomes.Add(new WeightedNamedOutcome("Stian6", 6, false));
+            outcomes.Add(new WeightedNamedOutcome("Stian7", 7, false));
+            outcomes.Add(new WeightedNamedOutcome("Stian8", 8, false));
+            outcomes.Add(new WeightedNamedOutcome("Stian9", 9, false));
+            outcomes.Add(new WeightedNamedOutcome("Stian10", 10, false));
 
             results.Add(1);
             results.Add(1);
