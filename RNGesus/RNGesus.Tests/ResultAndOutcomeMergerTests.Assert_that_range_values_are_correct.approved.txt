@@ -1,4 +1,4 @@
-﻿ From: 1 To: 1  ---  Stian1
+﻿From: 1 To: 1  ---  Stian1
 From: 2 To: 3  ---  Stian2
 From: 4 To: 6  ---  Stian3
 From: 7 To: 10  ---  Stian4
